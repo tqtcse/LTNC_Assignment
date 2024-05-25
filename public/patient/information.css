@@ -1,0 +1,395 @@
+
+* {
+  padding : 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Header {
+  display: block;
+  position: relative;
+  height: 88px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 85px;
+  padding-right: 85px;
+  border-bottom-width: 0.8px;
+  line-height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  border-bottom: rgb(4, 7, 68) solid 10px;
+  background-color: aliceblue;
+}
+
+/* .Header-line {
+  background-color: #08399c;
+  width: 100%;
+  height: 10px;
+} */
+.row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.col-lg-2.col-6 {
+  display: block;
+  box-sizing: border-box;
+  flex-basis: 16.6667%;
+  max-width: 16.6667%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+}
+
+.Logo {
+  box-sizing: border-box;
+  color: rgb(85, 85, 85);
+  display: block;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 18px;
+  text-align: left;
+  text-size-adjust: 100%;
+  width: 160px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.Logo h1 {
+  box-sizing: border-box;
+  color: rgb(4, 7, 68);
+  display: block;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 40px;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-bottom: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-top: 20px;
+  text-align: left;
+  text-size-adjust: 100%;
+  width: 160px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.Logo h1 a {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(https://www.booknmeet.com/img/bnm/BOOKNMEET.svg);
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: 165px 30px;
+  box-sizing: border-box;
+  color: rgb(0, 184, 255);
+  cursor: pointer;
+  display: block;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  height: 30px;
+  line-height: 40px;
+  outline-color: rgb(0, 184, 255);
+  outline-style: none;
+  outline-width: 0px;
+  text-align: left;
+  text-decoration-color: rgb(0, 184, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: -9999px;
+  text-size-adjust: 100%;
+  transition-behavior: normal;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  width: 165px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.col-lg-10.col-6 {
+  display: block;
+  box-sizing: border-box;
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+}
+
+.main-menu {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: -20px;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: end;
+}
+
+.nav li {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+}
+
+.nav li a {
+  display: block;
+  color: rgb(32, 32, 121);
+  text-decoration: none;
+  line-height: 68px;
+  height: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  
+}
+
+.nav li a small {
+  display: block;
+  color: rgb(8, 57, 156);
+  margin-top: -45px;
+  line-height: 65px;
+  font-size: 14px;
+}
+
+.nav li:hover a {
+  color: #00b8ff; 
+}
+
+.nav li a i {
+  font-size: 30px;
+ 
+}
+
+/* ------------------------------------------------------------ */
+body{
+    margin: 10px;
+    padding:10px;
+    font-family: "Noto Sans JP", Helvetica, sans-serif;
+}
+#nall{
+  background-image: url(https://img.freepik.com/free-photo/flat-lay-medical-objects-assortment-with-copy-space_23-2148502925.jpg?t=st=1715464085~exp=1715467685~hmac=3563dc5f54e59ac607e4e9614cd0c6d1e3925cceda6eacaecd8fef8cc7b0c9c8&w=1060);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#all{
+  padding: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  max-width: 50%;
+  margin-left: 25%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease 0s;
+  outline: none;
+  margin: auto;
+  margin-top: 10px;
+}
+h2 {
+    display: inline-block;
+    font-weight: 600;
+    border-bottom: rgb(4, 7, 68) solid 2px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+h1 {
+    display: inline-block;
+    font-weight: 600;
+    color: #2432ab;
+    border-bottom: rgb(4, 13, 172) solid 2px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#EL{
+    display: block;
+    border-top: rgb(4, 10, 133) solid 2px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+#PreviousBill p{
+    font-size: 18px;
+    font-family: "Noto Sans JP", Helvetica, sans-serif;
+    color: rgb(4, 6, 88);
+    text-transform:capitalize;
+    font-weight:bolder;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin: 0px;
+}
+#PreviousBill div:not(button){
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+input[type ="number"]{
+    display: block;
+    width: 15%;
+    padding: 5px;
+    border: 1px solid rgb(0, 184, 255);
+    border-radius: 4px;
+    font-family: "Noto Sans JP", Helvetica, sans-serif;
+    font-size: 14px;
+    outline-color: #2432ab;
+    margin-bottom: 10px;
+    max-width: 92%;
+  }
+textarea[class="form-input"]{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(0, 184, 255);
+    border-radius: 4px;
+    font-family: "Noto Sans JP", Helvetica, sans-serif;
+    font-size: 16px;
+    outline-color: #2432ab;
+    margin-bottom: 10px;
+}
+
+input[type ="date"]{
+    width: 30%;
+    padding: 5px;
+    border: 1px solid rgb(0, 184, 255);
+    border-radius: 4px;
+    font-family: "Noto Sans JP", Helvetica, sans-serif;
+    font-size: 14px;
+    outline-color: #2432ab;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(0, 184, 255);      
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  label{
+    font-size: 18px;
+    font-style :normal;
+    color: #2432ab;
+  }
+  .form-field i{
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 0.25s ease;
+    font-size: 18px;
+  }
+  .form-input {
+    width: 100%;
+    padding: 0 20px;
+    /* height: auto; */
+    border: 1px solid rgb(0, 184, 255);      
+    border-radius: 4px;
+    transition: 0.25s ease;
+    /* outline: none; */
+    outline-color: #2432ab;
+  }
+  
+  .form-input:focus {
+    border-color: #2432ab;
+  }
+  .form-field {
+   position: relative;
+  }
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+    color: #999;
+    transition: 0.25s ease;
+  }
+  .form-input:not(:placeholder-shown) + .form-label,
+  .form-input:focus + .form-label{
+    color : #2432ab;  
+    top : 0px;
+    left: 6px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: white;
+  }
+
+ button {
+    /* display: flex; */
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+    /* margin: auto;   */
+    margin-right: 10px;
+  }
+
+  
+button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+ button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
+ button:focus {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+
+
+

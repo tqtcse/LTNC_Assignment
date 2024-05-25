@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "firebase": "^10.12.1",
+    "firebase-admin": "^12.1.1",
+    "firebase-functions": "^4.9.0",
+    "firebase-storage": "^1.1.4",
+    "pug": "^3.0.2"
+  }
+}

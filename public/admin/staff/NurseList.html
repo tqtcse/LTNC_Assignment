@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NurseList.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/img/">
+    <title>Login </title>
+</head>
+<body>
+    <div id="Header">
+        <div class="row">
+            <div class="col-lg-2 col-6">
+                <div class="Logo">
+                    <h1>
+                        <a title="BKMEET" alt="BKMEET VIETNAM" href="/public/index1.html">BKMEET</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-10 col-6">
+                <div class="main-menu">
+                    <ul class="nav">
+                        <li> <b>ADMIN</b>
+                        </li>
+                        <li>
+                            <a href="../../index1.html">
+                                Home
+                               
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="DoctorList.html">Doctor List
+                             
+                            </a>
+                              
+                        </li>
+                        <li>
+                            <a href="NurseList.html">Nurse List
+                              
+                            </a>
+                              
+                        </li>
+                        <li>
+                            <a href="AssistList.html">Assist List
+                                
+                            </a>
+                           
+                        </li>
+                        <!-- <li>
+                            <a href="home.html">
+                                <i class="fa-solid fa-user-minus"></i>
+                            </a>
+                        </li> -->
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="Header-line">
+        </div>
+    </div>
+
+
+    <div id="nall">
+        <div id="all">
+            <div> <h2>Nurse List</h2></div>
+             <!-- <input type="text" id="specialist" list="CLINIC_LIST" placeholder="Choose a clinic"> -->
+    <div class="form-field">
+        <i class='bx bx-briefcase-alt'></i>
+        <input type="text" class="form-input" placeholder=" " id="specialist" list="CLINIC_LIST" >
+        <label for="name" class="form-label">Choose a clinic</label>
+    </div> 
+    <datalist id="CLINIC_LIST">
+        <option value="Ophthalmology">
+        <option value="Otorhinolaryngology">
+        <option value="Dermatology">
+        </option>
+    </datalist>
+    <div id="ShowList" style="display: none;">
+        
+    
+        <div id="showDiv"></div>
+        <div id="FindNurse">
+            <!-- <input type="text" id="PhoneNumber" placeholder="Find By Phone Number"> -->
+            <div class="form-field">
+                <i class='bx bx-search'></i>
+                <input type="text" class="form-input" placeholder=" " id="PhoneNumber"  >
+                <label for="name" class="form-label">Find By Phone Number</label>
+            </div> 
+            <button onclick="findNurse()">Find Nurse</button>
+        </div>
+        <div id="DetailNurse" style="display: none;">
+            <!-- <div>
+                Nurse
+                <div><input type="text" id="Name" placeholder="Nurse Name"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bxs-user'></i>
+                <input type="text" class="form-input" placeholder=" " id="Name"  >
+                <label for="name" class="form-label">Nurse Name</label>
+            </div> 
+            <!-- <div>
+                Gender
+                <div><input type="text" id="Gender" placeholder="Gender"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bx-male-female'></i>
+                <input type="text" class="form-input" placeholder=" " id="Gender" >
+                <label for="name" class="form-label">Gender</label>
+            </div>
+            <!-- <div>
+                Age 
+                <div><input type="text" id="Age" placeholder="Age"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bx-message-square'></i>
+                <input type="text" class="form-input" placeholder=" " id="Age" >
+                <label for="name" class="form-label">Age</label>
+            </div> 
+            <!-- <div>
+                Phone Number
+                <div><input type="text" id="PhoneNumber2" placeholder="Phone Number"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bxs-phone'></i>
+                <input type="text" class="form-input" placeholder=" " id="PhoneNumber2" >
+                <label for="name" class="form-label">Phone Number</label>
+            </div> 
+            <!-- <div>
+                Email
+                <div><input type="text" id="Email" placeholder="Email"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bxs-envelope' ></i>
+                <input type="text" class="form-input" placeholder=" " id="Email" >
+                <label for="name" class="form-label">Email</label>
+            </div> 
+            <!-- <div>
+                Address 
+                <div><input type="text" id="Address" placeholder="Address"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bx-location-plus' ></i>
+                <input type="text" class="form-input" placeholder=" " id="Address" >
+                <label for="name" class="form-label">Address</label>
+            </div> 
+            <!-- <div>
+                Clinic
+                <div><input type="text" id="Clinic" placeholder="Clinic"></div>
+            </div> -->
+            <div class="form-field">
+                <i class='bx bx-briefcase'></i>
+                <input type="text" class="form-input" placeholder=" " id="Clinic" >
+                <label for="name" class="form-label">Clinic</label>
+            </div> 
+            <div>
+                <img id="image" src="" alt="Image">
+            </div>
+            <div>
+                <img id="degreeImage" src="" alt="Image">
+            </div>
+            <div>
+                <button onclick="Save()">Save</button>
+                <button onclick="Hide()">Hide</button>
+            </div>
+        </div>
+        <div id="DL"><h3> List Of Nurse</h3></div>  
+            
+        <div id="Button">
+            <button onclick="showNurse()">Show Nurse List</button>
+        </div>
+        <div id="ts">
+            <div id="ShowList2">
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container margin_60_35">
+    <div class="row">
+       <div class="col-lg-4 col-md-12">
+           <p>
+               <a href="/public/index1.html" title="BKMEET ONLINE APPOINTMENT PLATFORM">
+                   <img src="/public/assets/img/logo.jpg" alt="BKMEET INDIA'S BEST ONLINE APPOINTMENT SCHEDULING PLATFORM" width="200" height="auto" class="img-fluid">
+               </a>
+           </p>
+           <h5>Online Appointment Scheduling Platform</h5>
+           <!-- <ul class="contacts">
+               <li><a href="https://g.page/BKMEET" target="_new"><i class="fa fa-map-marker"></i>Nasscom Startup Warehouse, Infopark Campus, Kakkanad, Kerala, India</a></li>
+               <li><a href="tel://+91 9496 947 548"><i class="fa fa-mobile-phone"></i>+91 9496 947 548</a></li>
+               <li><a href="mailto:post@BKMEET.com"><i class="fa fa-envelope"></i>post@BKMEET.com</a></li>
+           </ul> -->
+           <div class="follow_us">
+               <h5>Follow us</h5>
+               <ul>
+                   <li><a href="/public/index1.html" target="_new"><i class="fab fa-facebook"></i></a></li>
+                   <li><a href="/public/index1.html" target="_new"><i class="fab fa-twitter"></i></a></li>
+                   <li><a href="/public/index1.html" target="_new"><i class="fab fa-linkedin"></i></a></li>
+                   <li><a href="/public/index1.html" target="_new"><i class="fab fa-instagram"></i></a></li>
+                   <!-- <li><a href="https://api.whatsapp.com/send?phone=919496947548&amp;text=BKMEET%20-%20Confirmed%20Online%20Appointment" target="_new"><i class="fab fa-whatsapp"></i></a></li>
+                   <li><a href="https://youtube.com/@BKMEET" target="_new"><i class="fab fa-youtube" target="_new"></i></a></li>
+                   <li><a href="https://play.google.com/store/apps/dev?id=4852298828600166862" target="_new"><i class="fab fa-android" target="_new"></i></a></li> -->
+               </ul>
+           </div><br>
+           <!-- <p>
+               <a href="https://play.google.com/store/apps/details?id=com.BKMEET.app" target="_new" title="BKMEET mobile app now available on Google playstore">
+                   <img src="https://www.BKMEET.com/img/bnm/google-play-badge-bnm-vc-01.svg" width="120" height="36" alt="BKMEET mobile app now available on Google playstore" class="img-fluid">
+               </a>
+           </p> -->
+           
+       </div>
+       <div class="col-lg-3 col-md-4">
+       
+           <!-- <ul class="links">
+           <li><a href="/clinicalprocedures">Clinical Procedure Scheduling</a></li>
+           <li><a href="/vaccination">Vaccination</a></li>
+           <li><a href="/nutritionpractice">Nutrition Practice</a></li>
+           <li><a href="/compareplans">Compare Plans</a></li>
+               <li><a href="/terms">Terms of Use</a></li>
+               <li><a href="/privacy">Privacy Policy</a></li>
+               <li><a href="/personalinformationpolicy">Personal Information Policy</a></li>
+               <li><a href="/videoconsultationpolicy">Video Consultation Policy</a></li>
+               <li><a href="/trademarknotice">Trade Mark Notice</a></li>
+               <li><a href="/faq">FAQ</a></li>
+               
+               <li><a href="/limitedoffer">Special Offer</a></li>
+           </ul> -->
+           <p>Subscribe to BKMEET Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</p>
+            <form method="post" action="" class="rd-mailform subscribe" id="subscription_mail" data-parsley-validate="" novalidate="">
+                <input type="hidden" name="form-type" value="subscribe">
+                <input id="email_id" name="email_id" data-parsley-trigger="change" required="" type="email" class="form-control" placeholder="Email">
+                <br>
+                <!-- <input type="submit" class="btn_1" value="Submit"><div class="mfInfo"></div>												  -->
+            </form>
+       </div>
+          
+       <!-- <div class="col-lg-5 col-md-5" id="homepagesection">
+           <a class="btn btn-sm btn-primary" href="https://www.BKMEET.com/demo">Request BKMEET Demo</a>
+           <a class="btn btn-sm btn-primary" href="https://www.BKMEET.com/career">Career@BKMEET</a>
+           <a class="btn btn-sm btn-primary" href="https://www.BKMEET.com/webstories/bnm-amp-stories.html">WEBSTORIES</a>
+           <h5 style="margin-top: 20px;">Your guaranteed Mobile Online Appointment</h5>
+           <p>With BKMEET productivity tool, be successful in avoiding unscheduled absences. let our tool support you to be a leader in your medical practice. The best online appointment scheduling Platform enhances your practice management with online profile visibility.</p>
+           
+       </div> -->
+       
+    </div>
+    <br><br>
+    <!--/row-->
+    <div class="row">
+       <div class="col-md-12">
+                         </div>
+    </div>
+    <br>
+    <!-- <div class="row">
+       <div class="col-md-12">
+       
+           <p>
+               <a target="_blank" href="http://www.newindianexpress.com/cities/kochi/2017/feb/08/book-n-meet-a-doctor-1568476.html"><img style="width:168px;height:21px;margin-right:25px;" alt="BKMEET startup based in Kochi featured by National media,The New IndianExpress-Startupedia" class="img-fluid" src="https://www.BKMEET.com/img/theNewIndianExpress-BKMEET-2020.png"></a>
+               
+               <a target="_blank" href="http://epaperbeta.timesofindia.com/Article.aspx?eid=31811&amp;articlexml=Startups-wake-up-to-new-avenues-30072017002046"><img style="width: 165px;height:21px;margin-right:25px" alt="BKMEET startup based in Kochi featured by National media,The Times of India-TOI-Startup feature by local correspondant" class="img-fluid" src="https://www.BKMEET.com/img/theTimesofIndia-BKMEET-2020.png"></a>
+               
+               <a target="_blank" href="https://www.vanitha.in/justin/book-in-meet-prashanthi-nadhan-article-vanitha.html"><img style="width: 127px;height:36px;" alt="BKMEET startup based in Kochi featured by National media,Vanitha-Startup feature by local correspondant" class="img-fluid" src="https://www.BKMEET.com/img/Vanitha-Manorama-BKMEET-2020.png"></a>
+           
+           </p>
+       
+       </div>
+    
+    </div> -->
+    <hr>
+    <div class="row">
+       <!-- <div class="col-md-8">
+           <ul id="additional_links">
+               <li><a href="https://qstat.co" target="_new" title="BKMEET QMS WITH TOKEN">QSTAT</a></li>
+               <li><a href=" http://startups.startupmission.in/c/460" class="text-transform-none" target="_blank" title="Kerala Startup Mission Certified Startup">KSUM</a></li>
+               <li><a href="https://www.startupindia.gov.in/content/sih/en/profile.Startup.59807990e4b0bed982a4ed5c.html" class="text-transform-none" target="_blank" title="Govt. of India Certified Startup">STARTUPINDIA</a></li>
+           </ul>
+       </div> -->
+       <div class="col-md-4">
+           <div id="copy">Copyright © 2024 All Rights Reserved by <a href="/public/index1.html">BKMEET®</a></div>
+       </div>
+    </div>
+    </div>
+    </footer>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="../../index1.js"></script>
+<script>
+            document.getElementById("specialist").addEventListener('change',function(){
+                MedicineInforDiv = document.getElementById("ShowList")
+                MedicineInforDiv.style.display = 'block'
+            })
+            function Hide(){
+                document.getElementById("DetailNurse").style.display = 'none'
+            }
+
+
+            function Save(){
+                Name = document.getElementById('Name').value
+                Gender = document.getElementById('Gender').value 
+                Age = document.getElementById('Age').value
+                PhoneNumber = document.getElementById('PhoneNumber2').value
+                Email = document.getElementById('Email').value
+                Address = document.getElementById('Address').value
+                Clinic = document.getElementById('Clinic').value
+
+                var data = {
+                    Full_Name: Name,
+                    Gender: Gender,
+                    Age: Age,
+                    Phone_Number: PhoneNumber,
+                    Address: Address,
+                    Specialist: Clinic,
+                    Email: Email
+                    }
+
+                database.ref('nurseList/' + Clinic + '/' + PhoneNumber ).update(data)
+                .then(() => {
+                console.log("Thành công");
+            })
+                .catch((error) => {
+                console.error("Lỗi: ", error);
+            });
+                
+            }
+            async function findNurse(){ 
+                
+                Clinic = document.getElementById("specialist").value 
+                PhoneNumber = document.getElementById('PhoneNumber').value
+
+                document.getElementById("DetailNurse").style.display = 'block'
+                const pathss = `Avatar/Ophthalmology/Nurse/${PhoneNumber}`
+                const pathAsString = pathss.toString();
+                console.log(pathAsString)
+                try {
+                    const response = await fetch('../../api/image', {
+                        method: 'POST',
+                        headers:{   
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ pathAsString })
+                    })
+                    if(response.ok){
+                    const URL = await response.text();
+                    console.log(URL)
+                    const cleanUrl = URL.replace(/["\[\]]/g, '');
+                    console.log(cleanUrl);
+                    const imgElement = document.getElementById('image');
+                    imgElement.src = cleanUrl;
+
+                 } else {
+                    console.error('Yêu cầu không thành công. Mã lỗi:', response.status);
+                 }
+                } catch(error){
+                console.error('Lỗi khi gửi yêu cầu', error)
+                 }
+
+
+
+                const pathDegree = `Degree/Ophthalmology/Nurse/${PhoneNumber}`
+                const pathDegreeAsString = pathDegree.toString()
+                console.log(pathDegreeAsString)
+                
+                try {
+                    const responses = await fetch('../../api/imageDegree', {
+                        method: 'POST',
+                        headers:{   
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ pathDegreeAsString })
+                    })
+                    if(responses.ok){
+                    const URL = await responses.text();
+                    console.log(URL)
+                    const cleanUrl = URL.replace(/["\[\]]/g, '');
+                    console.log(cleanUrl);
+                    const imgElement = document.getElementById('degreeImage');
+                    imgElement.src = cleanUrl;
+
+                 } else {
+                    console.error('Yêu cầu không thành công. Mã lỗi:', responses.status);
+                 }
+                } catch(error){
+                console.error('Lỗi khi gửi yêu cầu', error)
+                 }
+                
+                
+
+
+                database.ref('nurseList/').once('value', function(snapshot){
+                    snapshot.forEach((childSnapshot) => {
+                        console.log(childSnapshot.val())
+                        childSnapshot.forEach((childSnapshot2) => {
+                        if(childSnapshot2.val().Phone_Number === PhoneNumber){
+                            document.getElementById('Name').value = childSnapshot2.val().Full_Name
+                            document.getElementById('Gender').value = childSnapshot2.val().Gender
+                            document.getElementById('Age').value = childSnapshot2.val().Age
+                            document.getElementById('PhoneNumber2').value = childSnapshot2.val().Phone_Number
+                            document.getElementById('Email').value = childSnapshot2.val().Email
+                            document.getElementById('Address').value = childSnapshot2.val().Address
+                            document.getElementById('Clinic').value = childSnapshot2.val().Specialist
+
+                        }
+                        })
+                    })
+                })
+            }
+            function showNurse(){
+
+
+                Clinic = document.getElementById("specialist").value 
+                database.ref('nurseList/' + Clinic).once('value', function(snapshot){
+                    snapshot.forEach((childSnapshot) => {
+                        //console.log(childSnapshot.val())
+                        
+                        const ShowInfoDiv = document.getElementById('ShowList2')
+
+                        const ShowDiv = document.createElement('div')
+                        ShowDiv.innerHTML = '';
+                        
+
+                        ButtonDiv1 = document.getElementById('Button')
+                        ButtonDiv1.style.display = 'none'
+
+                        ShowDiv.style.display = 'block';
+
+                        ShowDiv.innerHTML = `
+                        <p>Clinic: ${childSnapshot.val().Specialist}</p>
+                            <p>Name: ${childSnapshot.val().Full_Name}</p>
+                            <p>Age: ${childSnapshot.val().Age}</p>
+                            <p>Address: ${childSnapshot.val().Address}</p>
+                            <p>Gender: ${childSnapshot.val().Gender}</p>
+                            <p>Phone Number: ${childSnapshot.val().Phone_Number}</p>
+                        
+                        `
+
+                        const hideButton1 = document.createElement('button');
+                        hideButton1.textContent = "Hide";                   
+                        hideButton1.addEventListener('click', () => {
+                        ButtonDiv1.style.display = 'block';
+                        ShowDiv.style.display = 'none';
+                        hideButton1.style.display = 'none'
+                    
+                });
+                    
+
+
+                        ShowInfoDiv.appendChild(ShowDiv)
+                        ShowInfoDiv.appendChild(hideButton1)
+                    })
+                })
+            }
+</script>
